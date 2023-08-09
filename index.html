@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" 
+                href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+                integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+                crossorigin="anonymous" 
+                referrerpolicy="no-referrer" 
+            />
+</head>
+<body>
+    
+    <div id="wrapper">
+
+        <div class="container">
+
+            <h1>password generator</h1>
+
+            <div class="input-box">
+                <input type="text" placeholder="PASSWORD" disabled>
+                <button id="copy-btn">
+                    <span id="copy-msg">Copied</span>
+                    <i class="fa-regular fa-clone"></i>
+                </button>
+            </div>
+
+            <div class="rules-box">
+                <div class="length-box">
+                    <p>Password Length</p>
+                    <div class="length">10</div>
+                </div>
+                <div class="slide-container">
+                    <input type="range" min="1" max="20" value="10" class="slider" id="myRange">
+                </div>
+                <div class="rules-list">
+                    <div class="rule">
+                        <input type="checkbox" name="" id="uppercase" class="checkbox" checked>
+                        <label for="uppercase">Include Uppercase Letters</label>
+                    </div>
+                    <div class="rule">
+                        <input type="checkbox" name="" id="lowercase" class="checkbox">
+                        <label for="lowercase">Include Lowercase Letters</label>
+                    </div>
+                    <div class="rule">
+                        <input type="checkbox" name="" id="numbers" class="checkbox">
+                        <label for="numbers">Include Numbers</label>
+                    </div>
+                    <div class="rule">
+                        <input type="checkbox" name="" id="symbols" class="checkbox">
+                        <label for="symbols">Include Symbols</label>
+                    </div>  
+                </div>
+                <div class="strength-box">
+                    <p>Strength</p>
+                    <div id="indicator"></div>
+                </div>
+                <button id="generate-btn">Generate Password</button>
+            </div>
+
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

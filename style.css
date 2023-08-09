@@ -1,0 +1,239 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: sans-serif;
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+    height: 90%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    color: #fff;
+    text-align: center;
+}
+
+.container h1 {
+    text-transform: uppercase;
+    margin-block: 20px;
+    font-size: 1.5rem;
+}
+
+.container .input-box {
+    width: 40%;
+    height: 50px;
+    border-radius: 10px;
+    display: flex;
+    background-color: black;
+    padding: 10px;
+    margin-bottom: 20px;
+    box-shadow: 4px 4px rgb(236, 8, 236);
+}
+
+.container .input-box input {
+    font-size: 1rem;
+    width: 95%;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: yellow;
+}
+
+.container .input-box input::placeholder {
+    color: yellow;
+    opacity: 0.6;
+}
+
+.container .input-box #copy-btn {
+    width: 5%;
+    font-size: 1rem;
+    background-color: transparent;
+    color: aqua;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.container .input-box #copy-msg {
+    position: absolute;
+    background-color: palevioletred;
+    color: yellow;
+    padding: 4px;
+    border-radius: 10px;
+    top: -20px;
+    left: -50%;
+    font-size: 14px;
+    opacity: 0;
+    transition: .5s ease;
+}
+
+.container .rules-box {
+    width: 40%;
+    border-radius: 10px;
+    background-color: black;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+
+.container .rules-box .length-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-inline: 10px;
+}
+
+.container .rules-box .length-box .length {
+    color: yellow;
+}
+
+.container .rules-box .slide-container {
+    width: 100%;
+    margin-bottom: 20px;
+    padding-inline: 10px;
+}
+
+.container .rules-box .slide-container input {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%;
+    height: 10px;
+    border-radius: 30px;
+    background: linear-gradient(90deg, rgb(255, 0, 255) 50%, rgb(59, 19, 59) 0);
+    cursor: pointer;
+    /* background-size: 50% 100%; */
+}
+
+.slider::-webkit-slider-thumb {
+    position: relative;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: yellow;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    background-color: black;
+    outline: 2px solid yellow;
+    box-shadow: 0 0 25px 5px rgba(255, 229, 61, 0.80, green, blue, alpha);
+}
+
+.slider:focus {
+    outline: 2px solid yellow;
+}
+
+.container .rules-box .rules-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+    padding-inline: 10px;
+    margin-bottom: 20px;
+}
+
+.rule input[type="checkbox"] {
+    /* display: none; */
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border: 1px solid cyan;
+    position: relative;
+    cursor: pointer;
+    border-radius: 0.35rem;
+}
+
+.rule input[type="checkbox"]:checked {
+    background-color: aqua;
+}
+
+.rule input[type="checkbox"]:checked::before {
+    content: "✔";
+    position: absolute;
+    color: black;
+    font-size: 1.05rem;
+    font-weight: 800;
+    transform: translateY(-20%);
+}
+
+.container .rules-box .strength-box {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 10px;
+    margin-bottom: 30px;
+}
+
+.container .rules-box .strength-box #indicator {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: grey;
+    box-shadow: 0 0 5px 2px grey;
+}
+
+.container .rules-box #generate-btn {
+    width: 80%;
+    background-color: purple;
+    color: yellow;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 2px 2px yellow;
+    cursor: pointer;
+}
+
+@media (max-width: 820px) {
+    .container {
+        width: 65%;
+    }
+
+    .container .input-box,
+    .container .rules-box {
+        width: 100%;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        width: 95%;
+    }
+
+    /* .container .input-box,
+    .container .rules-box {
+        width: 100%;
+    } */
+}
+
+
+
+
+
